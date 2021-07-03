@@ -1,3 +1,6 @@
+import PropTypes from 'prop-types';
+import Item from '../models/item';
+
 function ShopItemFunc({ item }) {
   const { brand, title, description, descriptionFull, price, currency } = item;
   return (
@@ -20,5 +23,9 @@ function ShopItemFunc({ item }) {
     </div>
   );
 }
+
+ShopItemFunc.propTypes = {
+  user: PropTypes.instanceOf(Item).isRequired,
+};
 
 export default ShopItemFunc;
